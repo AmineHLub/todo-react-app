@@ -1,12 +1,12 @@
 import './App.css';
-import Calculator from './components/Calculator';
+import Main from './components/main';
 import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div className="calculator-wrapper">
+    <div>
       <Navbar />
-      <Calculator />
+      <Main />
     </div>
   );
 }
