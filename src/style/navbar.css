@@ -1,0 +1,21 @@
+.navbar-container {
+  background-color: rgb(89, 89, 216);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 25px;
+}
+
+* {
+  display: none;
+}
