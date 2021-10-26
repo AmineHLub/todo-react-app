@@ -1,11 +1,11 @@
-import React from 'react';
 import '../../style/main.css';
 
-export default function TodosInput() {
+// eslint-disable-next-line react/prop-types
+export default function TodosInput({ addingTodos }) {
   return (
     <div className="input-wraper">
-      <input />
-      <button type="button"> </button>
+      <input className="todo-input" />
+      <button type="button" onClick={addingTodos}> </button>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function TodosList(props) {
-  const { arrOfTodos } = props;
+export default function TodosList(todoz) {
+  const { arrOfTodos } = todoz;
   return (
     <div className="todos-list-wraper">
       <ul>
