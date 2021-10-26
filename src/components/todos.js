@@ -4,22 +4,33 @@ import TodosInput from './todosComponents/TodosInput';
 import TodosList from './todosComponents/TodosList';
 
 const TodosContainer = () => {
-  const [todoz, addTodos] = useState([]);
+  const [todos, addTodos] = useState([]);
+  const [todo, createTodo] = useState('');
+
+  const handleChange = (e) => {
+    createTodo(e.target.value);
+  };
 
   const addingTodos = () => {
-    const newTodo = {
-      id: 1,
-      name: 'title',
-    };
-    addTodos([newTodo, ...todoz]);
-    console.log(todoz);
+    if (todo !== '') {
+      const newTodo = {
+        id: Math.floor(Math.random() * 100),
+        name: todo,
+        completion: false,
+      };
+      addTodos([newTodo, ...todos]);
+    }
+  };
+
+  const deleteTask = (el) => {
+    addTodos(todos.filter((todoArr) => todoArr.id !== el));
   };
 
   return (
 
     <div className="todos-container">
-      <TodosInput addingTodos={addingTodos} />
-      <TodosList arrOfTodos={todoz} />
+      <TodosInput addingTodos={addingTodos} handleChange={handleChange} />
+      <TodosList deleteTask={deleteTask} todos={todos} />
     </div>
   );
 };
