@@ -75,4 +75,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
+- The green Add logo under pngwing's FREE NON-COMMERCIAL USE
+
 - This project is [MIT](./Licenses/MIT.md) licensed.
