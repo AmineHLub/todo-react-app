@@ -2,10 +2,15 @@ import '../../style/main.css';
 
 // eslint-disable-next-line react/prop-types
 export default function TodosInput({ addingTodos, handleChange }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.children[0].value = null;
+    addingTodos();
+  };
   return (
-    <div className="input-wraper">
+    <form onSubmit={handleSubmit} className="input-wraper">
       <input className="todo-input" onChange={(e) => handleChange(e)} />
-      <button type="button" onClick={addingTodos}> </button>
-    </div>
+      <button type="submit"> </button>
+    </form>
   );
 }

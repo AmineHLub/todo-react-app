@@ -24,6 +24,7 @@ a {
 }
 
 .hamburger-menu {
+  background-color: inherit;
   position: absolute;
   top: 25px;
   left: 40px;

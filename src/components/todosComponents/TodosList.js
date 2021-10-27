@@ -8,10 +8,10 @@ export default function TodosList({ deleteTask, todos }) {
         <ul>
           {
           todos.map((el) => (
-            <>
-              <li key={el.id}>{el.name}</li>
+            <li key={el.id}>
+              <span>{el.name}</span>
               <button type="button" onClick={() => deleteTask(el.id)}>Remove</button>
-            </>
+            </li>
           ))
         }
         </ul>
