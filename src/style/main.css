@@ -58,12 +58,3 @@
   margin: 0.5rem 0;
   padding: 2%;
 }
-
-.hamburger-menu {
-  position: absolute;
-  top: 25px;
-  left: 40px;
-  cursor: pointer;
-  border: none;
-  font-size: 3.5rem;
-}
