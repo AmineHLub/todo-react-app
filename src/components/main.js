@@ -5,15 +5,9 @@ import TodosContainer from './todos';
 import '../style/main.css';
 
 function Main({ OpenNav, open }) {
-  const closeNav = () => {
-    if (open === true) {
-      OpenNav(!open);
-    }
-  };
   return (
     <div className="main-page">
-      <button type="button" onClick={() => OpenNav(!open)}> nav </button>
-      <button type="button" onClick={closeNav}> closeNav </button>
+      <button className="hamburger-menu" type="button" onClick={() => OpenNav(!open)}> ≡ </button>
       <Header />
       <TodosContainer />
     </div>

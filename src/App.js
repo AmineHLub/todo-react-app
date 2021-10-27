@@ -7,7 +7,7 @@ function App() {
   const [open, OpenNav] = useState(false);
   return (
     <div>
-      {open && <Navbar />}
+      {open && <Navbar OpenNav={OpenNav} open={open} />}
       <Main OpenNav={OpenNav} open={open} />
     </div>
   );
